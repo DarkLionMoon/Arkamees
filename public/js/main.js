@@ -14,26 +14,20 @@
  */
 
 // --- Core ---
-import './core/data.js';
-import { initRouter, navigateHome } from './core/router.js';
-// Se importi state.js, assicurati che il percorso sia corretto
-import { state } from './core/state.js';
+import './core/data.js';   
+import { initRouter } from './core/router.js';
+import { state }      from './core/state.js';
 
-// ── UI ────────────────────────────────────────────────────────────────────────
+// --- UI ---
 import { initTheme }    from './ui/theme.js';
-import { initFont }     from './ui/fonts.js';      // Aggiunta la 's'
+import { initFont }     from './ui/fonts.js';      // Corretto con 's'
 import { initNav }      from './ui/nav.js';
 import { initSearch }   from './ui/search.js';
 import { initCarousel } from './ui/carousel.js';
 import { initMap }      from './ui/map.js';
 import { initOverlay }  from './ui/overlay.js';
 import { buildWhisperNav, teardownWhisperNav } from './ui/whispernav.js'; // Tutto minuscolo
-import {
-  initLoader,
-  initPullToRefresh,
-  initCopyLink,
-  initFadeInObserver,
-} from './ui/utils.js';
+import { initLoader, initPullToRefresh, initCopyLink, initFadeInObserver } from './ui/utils.js';
 
 // ─── Bootstrap ────────────────────────────────────────────────────────────────
 
