@@ -1,0 +1,20 @@
+# ════════════════════════════════════
+# ARCAMIS — Cloudflare Worker config
+# wrangler deploy
+# ════════════════════════════════════
+
+name            = "arcamis-notion-proxy"
+main            = "functions/notion-worker.js"
+compatibility_date = "2024-01-01"
+
+# Variabili secret (da impostare via Dashboard o CLI):
+#   wrangler secret put NOTION_TOKEN
+# Non mettere il token qui!
+
+[vars]
+# NOTION_TOKEN va impostato come secret, non qui
+
+[[routes]]
+# Sostituisci con il tuo dominio Cloudflare Pages
+pattern = "arcamis.pages.dev/api/notion/*"
+zone_name = "pages.dev"
