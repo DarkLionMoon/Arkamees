@@ -15,11 +15,25 @@ import { showToast } from './toast.js';
 // ─── Loader ────────────────────────────────────────────────────────────────────
 
 export function initLoader() {
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      document.getElementById('site-loader')?.classList.add('hidden');
-    }, 500);
-  });
+    const loader = document.getElementById('site-loader');
+    if (!loader) return;
+
+    const hide = () => {
+        setTimeout(() => {
+            loader.classList.add('hidden');
+        }, 500);
+    };
+
+    // Se la pagina è già pronta, chiudi subito
+    if (document.readyState === 'complete') {
+        hide();
+    } else {
+        // Altrimenti attendi il load, ma metti un timer di sicurezza
+        window.addEventListener('load', hide);
+        
+        // Timer di "smaltimento" forzato (3 secondi)
+        setTimeout(hide, 3000); 
+    }
 }
 
 // ─── Pull-to-refresh ──────────────────────────────────────────────────────────
