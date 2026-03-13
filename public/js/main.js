@@ -18,14 +18,14 @@ import './core/data.js';               // sincronizza window.pages / window.getP
 import { initRouter, navigateHome }   from './core/router.js';
 
 // ── UI ────────────────────────────────────────────────────────────────────────
-import { initTheme }           from './ui/theme.js';
-import { initFont }            from './ui/fonts.js';
-import { initNav }             from './ui/nav.js';
-import { initSearch }          from './ui/search.js';
-import { initCarousel }        from './ui/carousel.js';
-import { initMap }             from './ui/map.js';
-import { initOverlay }         from './ui/overlay.js';
-import { buildWhisperNav, teardownWhisperNav } from './ui/whispernav.js';
+import { initTheme }    from './ui/theme.js';
+import { initFont }     from './ui/fonts.js';      // Aggiunta la 's'
+import { initNav }      from './ui/nav.js';
+import { initSearch }   from './ui/search.js';
+import { initCarousel } from './ui/carousel.js';
+import { initMap }      from './ui/map.js';
+import { initOverlay }  from './ui/overlay.js';
+import { buildWhisperNav, teardownWhisperNav } from './ui/whispernav.js'; // Tutto minuscolo
 import {
   initLoader,
   initPullToRefresh,
