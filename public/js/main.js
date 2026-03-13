@@ -13,9 +13,11 @@
  * @module main
  */
 
-// ── Core ──────────────────────────────────────────────────────────────────────
-import './core/data.js';               // sincronizza window.pages / window.getPage
-import { initRouter, navigateHome }   from './core/router.js';
+// --- Core ---
+import './core/data.js';
+import { initRouter, navigateHome } from './core/router.js';
+// Se importi state.js, assicurati che il percorso sia corretto
+import { state } from './core/state.js';
 
 // ── UI ────────────────────────────────────────────────────────────────────────
 import { initTheme }    from './ui/theme.js';
