@@ -14,20 +14,20 @@
  */
 
 // --- Core ---
-import './core/data.js';   
-import { initRouter } from './core/router.js';
-import { state }      from './core/state.js';
+import './public/js/core/data.js';   
+import { initRouter } from './public/js/core/router.js';
+import { state }      from './public/js/core/state.js';
 
 // --- UI ---
-import { initTheme }    from './ui/theme.js';
-import { initFont }     from './ui/fonts.js';      // Corretto con 's'
-import { initNav }      from './ui/nav.js';
-import { initSearch }   from './ui/search.js';
-import { initCarousel } from './ui/carousel.js';
-import { initMap }      from './ui/map.js';
-import { initOverlay }  from './ui/overlay.js';
-import { buildWhisperNav, teardownWhisperNav } from './ui/whispernav.js'; // Tutto minuscolo
-import { initLoader, initPullToRefresh, initCopyLink, initFadeInObserver } from './ui/utils.js';
+import { initTheme }    from './public/js/ui/theme.js';
+import { initFont }     from './public/js/ui/fonts.js';      // Corretto con 's'
+import { initNav }      from './public/js/ui/nav.js';
+import { initSearch }   from './public/js/ui/search.js';
+import { initCarousel } from './public/js/ui/carousel.js';
+import { initMap }      from './public/js/ui/map.js';
+import { initOverlay }  from './public/js/ui/overlay.js';
+import { buildWhisperNav, teardownWhisperNav } from './public/js/ui/whispernav.js'; // Tutto minuscolo
+import { initLoader, initPullToRefresh, initCopyLink, initFadeInObserver } from './public/js/ui/utils.js';
 
 // ─── Bootstrap ────────────────────────────────────────────────────────────────
 
