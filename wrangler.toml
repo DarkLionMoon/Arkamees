@@ -1,20 +1,15 @@
 # ════════════════════════════════════
-# ARCAMIS — Cloudflare Worker config
-# wrangler deploy
+# ARCAMIS — Cloudflare Pages Config
 # ════════════════════════════════════
 
-name            = "arcamis-notion-proxy"
-main            = "functions/notion-worker.js"
+name = "arkamees"
 compatibility_date = "2024-01-01"
 
-# Variabili secret (da impostare via Dashboard o CLI):
-#   wrangler secret put NOTION_TOKEN
-# Non mettere il token qui!
+# Fondamentale per Cloudflare Pages:
+# Indica la cartella dove si trovano i tuoi file statici (index.html, css, etc.)
+# Se non hai una build, metti "." per la root o "public" se li hai lì.
+pages_build_output_dir = "." 
 
 [vars]
-# NOTION_TOKEN va impostato come secret, non qui
-
-[[routes]]
-# Sostituisci con il tuo dominio Cloudflare Pages
-pattern = "arcamis.pages.dev/api/notion/*"
-zone_name = "pages.dev"
+# NOTION_TOKEN va caricato tramite la Dashboard di Cloudflare Pages 
+# sotto Settings -> Functions -> Variables
