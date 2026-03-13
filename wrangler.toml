@@ -1,15 +1,15 @@
 # ════════════════════════════════════
-# ARCAMIS — Cloudflare Pages Config
+# ARCAMIS — Cloudflare Pages config
 # ════════════════════════════════════
+#
+# NON usare "wrangler deploy" — il deploy avviene
+# automaticamente tramite Cloudflare Pages (push su GitHub).
+#
+# Per impostare il token Notion:
+#   Dashboard Cloudflare → Pages → arkamees
+#   → Settings → Environment Variables → Add variable
+#   Nome: NOTION_TOKEN   Tipo: Secret   Valore: secret_xxx...
 
-name = "arkamees"
-compatibility_date = "2024-01-01"
-
-# Fondamentale per Cloudflare Pages:
-# Indica la cartella dove si trovano i tuoi file statici (index.html, css, etc.)
-# Se non hai una build, metti "." per la root o "public" se li hai lì.
-pages_build_output_dir = "." 
-
-[vars]
-# NOTION_TOKEN va caricato tramite la Dashboard di Cloudflare Pages 
-# sotto Settings -> Functions -> Variables
+name                    = "arkamees"
+compatibility_date      = "2024-01-01"
+pages_build_output_dir  = "."
