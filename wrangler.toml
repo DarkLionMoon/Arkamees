@@ -1,20 +1,18 @@
 # ════════════════════════════════════
 # ARCAMIS — Cloudflare Worker config
-# wrangler deploy
+# Optimized for CI/CD and Production
 # ════════════════════════════════════
 
-name            = "arcamis-notion-proxy"
+# Allineato al nome atteso dal sistema CI (come da log precedente)
+name            = "arkamees" 
 main            = "functions/notion-worker.js"
 compatibility_date = "2024-01-01"
 
-# Variabili secret (da impostare via Dashboard o CLI):
-#   wrangler secret put NOTION_TOKEN
-# Non mettere il token qui!
-
 [vars]
-# NOTION_TOKEN va impostato come secret, non qui
+# NOTION_TOKEN deve rimanere un Secret (wrangler secret put)
 
-[[routes]]
-# Sostituisci con il tuo dominio Cloudflare Pages
-pattern = "arcamis.pages.dev/api/notion/*"
-zone_name = "pages.dev"
+# RIMOZIONE [[routes]]: I sottodomini .pages.dev non supportano 
+# rotte dirette da Worker esterni tramite config.
+
+[observability]
+enabled = true # Best practice per monitorare i proxy in produzione
