@@ -727,9 +727,11 @@
 <audio id="arc-audio" src="ambient.mp3" loop preload="none"></audio>
 
 <!-- ═══ SCRIPTS ═══ -->
-<script src="notion-render.js" defer></script>
-<script src="fx.js" defer></script>
-<script type="module" src="public/js/main.js"></script>
+<script src="public/js/core/data.js" type="module"></script>
+<script src="public/js/core/fw.js" type="module"></script>
+<script src="public/js/core/logic.js" type="module"></script>
+<script src="public/js/ui/fonts.js" type="module"></script>
+<script src="public/js/ui/whispernav.js" type="module"></script>
 <script>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {
